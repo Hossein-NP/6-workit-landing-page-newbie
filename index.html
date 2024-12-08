@@ -6,6 +6,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <title>Frontend Mentor | Workit landing page</title>
   <link rel="stylesheet" href="Assets/fonts/stylesheet.css">
+  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="TextPreset.css">
   <script src="https://cdn.tailwindcss.com"></script>
   <style type="text/tailwindcss">
@@ -45,21 +46,32 @@
     </symbol>
   </svg>
 
+
+  <!-- Header bg  -->
+  <div class="header-bg">
+
+  </div>
   <!-- Header Navbar  -->
-  <header class="xs:h-[67px] xll:h-[91px] xs:px-5 xs:pt-8 md:px-11 xll:pt-14 xll:px-20">
+  <header class="xs:h-[67px] xll:h-[91px] xs:px-5 xs:pt-8 md:px-11 xll:pt-14 xll:px-20 relative z-20">
     <div class="container">
       <nav class="flex justify-between xll:max-w-[1120px] mx-auto">
         <!-- Logo  -->
         <div>
           <svg width="97" height="26">
-            <use xlink:href="#logo-dark"></use>
+            <use xlink:href="#logo-light"></use>
           </svg>
         </div>
         <!-- Nav Link  -->
-        <a href="#" class="text-preset-5 pb-[0.5px] border-b-[3px] border-b-customGreen">Apply for access</a>
+        <a href="#" class="text-preset-5 text-white pb-[0.5px] border-b-[3px] border-b-customGreen">Apply for access</a>
       </nav>
     </div>
   </header>
-
+  <!-- Hero Header  -->
+  <section class="xs:px-5 relative z-20 xs:mt-14 xs:mb-36">
+    <div class="xs:w-[335px] xs:h-[190px]">
+      <h2 class="text-white text-preset-1 font-semibold xs:text-[48px] xs:leading-[48px] text-center mb-10">Data tailored to your needs.</h2>
+      <a href="#" class="xs:w-[151px] xs:h-[53px] bg-customGreen mt-10 block text-center leading-[53px] text-purple900 text-preset-5 xs:text-[16px] mx-auto">Learn more</a>
+    </div>
+  </section>
 </body>
 </html>
