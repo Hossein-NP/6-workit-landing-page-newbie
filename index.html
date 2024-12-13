@@ -33,22 +33,22 @@
             "xs" : "375px",
             "xll" : "1440px"
           },
-          keyframes: {
-        randomMovement: {
-          '0%': { transform: 'translate(0, 0) rotate(0deg)', opacity: '0.5' },
-          '20%': { transform: 'translate(50px, -30px) rotate(45deg)', opacity: '0.4' },
-          '40%': { transform: 'translate(-60px, 40px) rotate(90deg)', opacity: '0.3' },
-          '60%': { transform: 'translate(30px, 60px) rotate(135deg)', opacity: '0.2' },
-          '80%': { transform: 'translate(-40px, -50px) rotate(180deg)', opacity: '0.4' },
-          '100%': { transform: 'translate(0, 0) rotate(225deg)', opacity: '0.5' },
+            animation : {
+              ping: "ping 10s cubic-bezier(0, 0, 0.2, 1) infinite",
+            },
+            animation: {
+        particle: 'particleMove 15s linear infinite', // تعریف انیمیشن برای حرکت پارتیکل‌ها
+      },
+      keyframes: {
+        particleMove: {
+          '0%': { transform: 'scale(1) translateX(0) translateY(0) rotate(0deg)', opacity: '0.2' },
+          '50%': { opacity: '0.6', transform: 'scale(1.2) translateX(10%) translateY(10%) rotate(180deg)' },
+          '100%': { transform: 'scale(1) translateX(0%) translateY(0) rotate(0deg)', opacity: '0.2' },
         },
-      },
-      animation: {
-        random: 'randomMovement 10s infinite ease-in-out',
-      },
         }
       }
     }
+}
   </script>
 </head>
 <body class="overflow-hidden">
@@ -61,9 +61,9 @@
 
 
   <div class="w-full h-[560px] absolute top-0 z-20 flex justify-between overflow-hidden">
-    <img  class="xs:hidden md:inline-block xll:hidden absolute top-[80px] md:-left-[230px] m-0 p-0  z-20" src="Assets/images/bg-pattern-1.svg" alt="">
-    <img class="xs:hidden md:inline-block absolute top-[250px] -right-[90px] m-0 p-0  z-20" src="Assets/images/bg-pattern-2.svg" alt="">
-    <img class="xs:hidden xll:inline-block top-[160px] -left-[60px] absolute top-0 left-0-0 m-0 p-0  z-20" src="Assets/images/bg-pattern-3.svg" alt="">
+    <img  class="xs:hidden md:inline-block xll:hidden absolute top-[80px] md:-left-[230px] m-0 p-0  z-20 animate-particle" src="Assets/images/bg-pattern-1.svg" alt="">
+    <img class="xs:hidden md:inline-block absolute top-[250px] -right-[50px] m-0 p-0  z-20 animate-particle" src="Assets/images/bg-pattern-2.svg" alt="">
+    <img class="xs:hidden xll:inline-block top-[160px] -left-[60px] absolute top-0 left-0-0 m-0 p-0 z-20 animate-particle" src="Assets/images/bg-pattern-3.svg" alt="">
   </div>
   <!-- Header bg  -->
   <div class="header-bg md:h-[630px] lg:h-[650px] xl:h-[640px] xll:h-[800px]">
